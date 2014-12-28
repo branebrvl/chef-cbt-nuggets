@@ -7,7 +7,7 @@ node_name                "branebrvl"
 client_key               "#{current_dir}/branebrvl.pem"
 validation_client_name   "abcwidgets-validator"
 validation_key           "#{current_dir}/abcwidgets-validator.pem"
-chef_server_url          "https://chef-server:443/organizations/abcwidgets"
+chef_server_url          "https://192.168.33.10:443/organizations/abcwidgets"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
 cookbook_path            ["#{current_dir}/../cookbooks"]

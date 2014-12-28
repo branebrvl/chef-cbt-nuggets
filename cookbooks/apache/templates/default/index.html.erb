@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Index</title>
+  </head>
+  <body>
+    Hello Apache user!
+    <h1>This is our awesome template</h1>
+    <h3>It is maintained by <%= node["maintainer"] %></h3>
+    <br>
+    <h3>And has a bandwith requirement of: <%= node["bandwith"]%></h3>
+    <h3>My fully qualified domain name is:: <%= node["fqdn"]%></h3>
+  </body>
+</html>
