@@ -61,3 +61,4 @@ Berkshelf(.com)
 
  Chef Solo
 
+knife solo cook user@server  -i private_key --no-berkshelf --no-librarian
