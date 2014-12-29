@@ -55,3 +55,9 @@ knife role list
 Community Tools
 https://supermarket.chef.io/
  knife cookbook site install NAME_OF_THE_COOKBOOK
+
+Berkshelf(.com)
+ - replaces "knife cookbook _______"
+
+ Chef Solo
+
