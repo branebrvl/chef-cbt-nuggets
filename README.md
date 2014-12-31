@@ -62,3 +62,8 @@ Berkshelf(.com)
  Chef Solo
 
 knife solo cook user@server  -i private_key --no-berkshelf --no-librarian
+
+Kitchen
+bundle exec kitchen converge 
+bundle exec kitchen login
+bundle exec kitchen delete
