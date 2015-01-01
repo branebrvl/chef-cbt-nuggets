@@ -61,9 +61,20 @@ Berkshelf(.com)
 
  Chef Solo
 
+> it's better to use Test Kitchen
 knife solo cook user@server  -i private_key --no-berkshelf --no-librarian
 
 Kitchen
 bundle exec kitchen converge 
 bundle exec kitchen login
 bundle exec kitchen delete
+
+Berksfile
+The Berksfile is Berkshelf specific, while the metadata file is built into Chef.
+
+Adding your dependencies to the metadata file allows other applications, like librarian-chef or the supermarket, to read your dependencies as well.
+
+Note that Berkshelf reads the dependencies from metadata as well, as long as you add the metadata line to the Berksfile.
+
+I strongly recommend specifying all dependencies in your metadata file, and using your Berksfile to point to where specific cookbooks are stored if they're not available in the supermarket (like Github, or a local path).
+
