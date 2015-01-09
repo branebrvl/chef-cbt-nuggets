@@ -69,6 +69,10 @@ bundle exec kitchen converge
 bundle exec kitchen login
 bundle exec kitchen delete
 
+- use berks to create cookbooks, berks will run kitchen init
+http://docs.aws.amazon.com/opsworks/latest/userguide/cookbooks-101-opsworks-berkshelf.html
+
+
 Berksfile
 The Berksfile is Berkshelf specific, while the metadata file is built into Chef.
 
@@ -78,3 +82,11 @@ Note that Berkshelf reads the dependencies from metadata as well, as long as you
 
 I strongly recommend specifying all dependencies in your metadata file, and using your Berksfile to point to where specific cookbooks are stored if they're not available in the supermarket (like Github, or a local path).
 
+
+Cookbooks
+apache2
+  - research how to use web_app resource
+
+cookbooks best practices
+https://www.youtube.com/watch?v=bzmxKwWrLCM
+github: tduffield
