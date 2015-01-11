@@ -16,7 +16,7 @@ suites:
   - name: default
     run_list:
       # - role[base]
-      - role[webserver]
+      - ["recipe[web_server]"]
       # - role[application]
       # - role[build]
     attributes:
