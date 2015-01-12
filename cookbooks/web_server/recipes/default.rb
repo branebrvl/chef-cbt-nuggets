@@ -10,7 +10,21 @@
 # include_recipe "apache::install"
 # include_recipe "apache::base-files"
 
+# node['php']['packages'].each do |pkg|
+#     package pkg do
+#       action :install
+#     end
+# end
+
+
 include_recipe 'apache2'
 include_recipe 'apache2::mod_php5'
 
-include_recipe 'php::module_mysql'
+include_recipe 'yum-epel'
+include_recipe 'yum-remi'
+
+node['php']['packages'].each do |package|
+  yum_package package do
+    action :install
+  end
+end
