@@ -1,6 +1,3 @@
 site :opscode
 
-# Local cookbooks
-cookbook 'apache', path: '../../cookbooks/apache'
-
 metadata

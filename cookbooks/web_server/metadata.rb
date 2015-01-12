@@ -6,4 +6,7 @@ description      'Installs/Configures web_server'
 long_description 'Installs/Configures web_server'
 version          '0.1.0'
 
-depends 'apache'
+depends 'apache2', '~> 1.8.0'
+depends 'mysql', '~> 4.0.0'
+depends 'database', '~> 1.6.0'
+depends 'php', '~> 1.3.0'
