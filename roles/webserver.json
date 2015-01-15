@@ -1,0 +1,21 @@
+{
+  "name": "webserver",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Install a web server",
+  "default_attributes": {
+  },
+  "run_list": [
+    // "recipe[users::sysadmins]",
+    // "recipe[sudo]",
+    "recipe[web_server::default]"
+  ],
+  "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": ["vagrant"],
+        "passwordless": true
+      }
+    }
+  }
+}

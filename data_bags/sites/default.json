@@ -1,0 +1,9 @@
+{
+  "id": "default",
+  "host": "app.local",
+  "aliases": [
+    "www.app.dev",
+    "app.*.xip.io"
+  ],
+  "docroot": "/vagrant/public"
+}
