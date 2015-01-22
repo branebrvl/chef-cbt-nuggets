@@ -6,9 +6,8 @@ include_recipe 'apache2::mod_ssl'
 include_recipe 'apache2::mod_log_config'
 # Generate selfsigned ssl
 execute "make-ssl-cert" do
-  command "openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt"
-  ignore_failure true
-  action :nothing
+  command "openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/apache.key -out /etc/httpd/ssl/apache.crt -batch" 
+  action :run
 end
 
 # Configure sites
