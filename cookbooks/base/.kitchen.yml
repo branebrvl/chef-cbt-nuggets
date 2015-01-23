@@ -20,13 +20,12 @@ platforms:
       - Vagrantfile.rb    
     synced_folders:
       - ["../../", "/vagrant", 'id: "core", mount_options: ["dmode=777,fmode=777"]']
+    ssh:
+      - ["forward_agent", "true"]
 
 
 suites:
   - name: default
     run_list:
       - role[base]
-      - role[webserver]
-      # - role[application]
-      # - role[build]
     attributes:

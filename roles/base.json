@@ -1,0 +1,11 @@
+{
+  "name": "base",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Install git, dotfiles, unzip, curl",
+  "default_attributes": {
+  },
+  "run_list": [
+    "recipe[base]"
+  ]
+}

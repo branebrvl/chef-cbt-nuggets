@@ -8,7 +8,7 @@
   "run_list": [
     // "recipe[users::sysadmins]",
     // "recipe[sudo]",
-    "recipe[web_server::default]"
+    "recipe[web_server]"
   ],
   "override_attributes": {
     "authorization": {

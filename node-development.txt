@@ -1,13 +1,12 @@
  - base
-  - git
-  - curl
-  - unzip
-  - .xip.io
-  - dotfiles
- - php
+  /*- git*/
+  /*- curl*/
+  /*- unzip*/
+  /*- dotfiles*/
+/* - php*/
+/* - mysql*/
+/* - apache*/
  - node
- - mysql
- - apache
  - composer
  - phantomjs
  - ruby
