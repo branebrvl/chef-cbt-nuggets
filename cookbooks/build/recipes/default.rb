@@ -1,12 +1,10 @@
 #
-# Cookbook Name:: base
+# Cookbook Name:: build
 # Recipe:: default
 #
 # Copyright (C) 2015 YOUR_NAME
 #
 # All rights reserved - Do Not Redistribute
 #
-#
 
-include_recipe 'base::unzip'
-include_recipe 'base::dotfiles'
+include_recipe 'build::node'

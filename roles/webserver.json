@@ -6,16 +6,6 @@
   "default_attributes": {
   },
   "run_list": [
-    // "recipe[users::sysadmins]",
-    // "recipe[sudo]",
     "recipe[web_server]"
-  ],
-  "override_attributes": {
-    "authorization": {
-      "sudo": {
-        "users": ["vagrant"],
-        "passwordless": true
-      }
-    }
-  }
+  ]
 }

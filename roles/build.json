@@ -1,0 +1,11 @@
+{
+  "name": "build",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Install build tools, node, composer, phantomjs, ruby",
+  "default_attributes": {
+  },
+  "run_list": [
+    "recipe[build]"
+  ]
+}

@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  data_bags_path: '../../data_bags'
+  roles_path: '../../roles'
+  # environments_path: '../../environments'
+  # encrypted_data_bag_secret_key_path: '/etc/chef/databags.pem'
+  # client_rb:
+  #   node_name: backend
+  #   environment: staging
+
+platforms:
+- name: centos7
+  driver:
+    box: centos-7.0 
+    vagrantfiles: 
+      - Vagrantfile.rb    
+    synced_folders:
+      - ["../../", "/vagrant", 'id: "core", mount_options: ["dmode=777,fmode=777"]']
+    ssh:
+      - ["forward_agent", "true"]
+
+
+suites:
+  - name: default
+    run_list:
+      - role[build]
+    attributes:

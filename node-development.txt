@@ -6,7 +6,7 @@
 /* - php*/
 /* - mysql*/
 /* - apache*/
- - node
+/* - node*/
  - composer
  - phantomjs
  - ruby

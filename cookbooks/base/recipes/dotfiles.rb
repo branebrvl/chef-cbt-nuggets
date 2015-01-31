@@ -1,3 +1,20 @@
+include_recipe 'git'
+include_recipe 'zsh'
+
+# install vim and tmux
+%w(vim-enhanced tmux).each do |pkg|
+  package pkg
+end
+
+# install dotfiles
+bash "install_branes_dotfiles" do
+  code <<-EOH
+    cd $HOME
+    git clone https://github.com/branebrvl/dotfiles.git
+    ./dotfiles/setup.sh 
+  EOH
+end
+
 # tools
 #
 # home_dir = "/home/#{node['dotfiles']['user']}"
@@ -18,20 +35,6 @@
 #   content node['dotfiles']['public_key']
 #   action :create
 # end
-
-# install vim and tmux
-%w(vim-enhanced tmux).each do |pkg|
-  package pkg
-end
-
-# install dotfiles
-bash "install_branes_dotfiles" do
-  code <<-EOH
-    cd $HOME
-    git clone https://github.com/branebrvl/dotfiles.git
-    ./dotfiles/setup.sh 
-  EOH
-end
 
 # sync dotfiles
 # git "#{home_dir}/dotfiles" do
