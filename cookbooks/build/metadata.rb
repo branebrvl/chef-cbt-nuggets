@@ -7,3 +7,4 @@ long_description 'Installs/Configures build'
 version          '0.1.0'
 
 depends 'git', '~> 4.1.0'
+depends 'composer', '~> 2.0.0'

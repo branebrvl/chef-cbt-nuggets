@@ -6,13 +6,17 @@ include_recipe 'zsh'
   package pkg
 end
 
+home_dir = "/home/#{node['dotfiles']['user']}"
 # install dotfiles
 bash "install_branes_dotfiles" do
+  cwd home_dir
+  user node['dotfiles']['user']
+    # cd #{home_dir}
   code <<-EOH
-    cd $HOME
     git clone https://github.com/branebrvl/dotfiles.git
     ./dotfiles/setup.sh 
   EOH
+  environment 'HOME' => home_dir
 end
 
 # tools

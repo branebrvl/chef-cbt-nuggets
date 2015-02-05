@@ -8,3 +8,4 @@
 #
 
 include_recipe 'build::node'
+include_recipe 'build::composer'
