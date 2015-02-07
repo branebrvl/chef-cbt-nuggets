@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "dev-centos7.0"
   config.vm.network "private_network", ip: "192.168.33.30"
   config.ssh.forward_agent = true
-  config.vm.synced_folder "../../", "/vagrant"
+  config.vm.synced_folder "../", "/vagrant"
   # config.vbguest.auto_update = false
   # config.vbguest.iso_path = "#{ENV['HOME']}/Downloads/VBoxGuestAdditions_4.3.16.iso"
   # config.vbguest.no_remote = true
